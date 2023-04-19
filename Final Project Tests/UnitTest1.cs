@@ -10,8 +10,8 @@ namespace Final_Project_Tests
         public void Test1(bool actual, bool expected)
         {
             var vacare = new VACare();
-            var result = vacare.MedicalSeriveNOTAvailable(actual);
-            Assert.Equal(expected, result);
+            var actual = vacare.MedicalSeriveNOTAvailable(actual);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
@@ -26,6 +26,7 @@ namespace Final_Project_Tests
 
         public void NoVAMedicalFacilityTest (string vetState, bool expected)
         {
+<<<<<<< HEAD
             //arrange
             var VACare = new VACare();
             //act
@@ -44,6 +45,10 @@ namespace Final_Project_Tests
             //act
             var actual = VACare.TimeEligibility(aveDriveTimeMF, aveDriveTimeSC, aveWaitDayMF, aveWaitDaySC);
             //assert
+=======
+            var vacare = new VACare();
+            var actual = vacare.TimeEligibility(int aveDriveTimeMF, int aveDriveTimeSC, int aveWaitDayMF, int aveWaitDaySC, bool actual);
+>>>>>>> f6a7f29687e00b751385316d966ba67170807ea6
             Assert.Equal(expected, actual);
         }
 
