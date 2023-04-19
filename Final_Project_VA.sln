@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final_Project_VA", "Final_Project_VA\Final_Project_VA.csproj", "{9E335FB1-3BDC-4614-9EB9-83E8A5C29183}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Final_Project_VA", "Final_Project_VA\Final_Project_VA.csproj", "{9E335FB1-3BDC-4614-9EB9-83E8A5C29183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final Project Tests", "Final Project Tests\Final Project Tests.csproj", "{97F03D2F-4217-453D-9D11-BF1D7743ADC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{63C88742-7C00-4CFF-88B8-37376F3DCE19}"
 EndProject
@@ -17,10 +19,17 @@ Global
 		{9E335FB1-3BDC-4614-9EB9-83E8A5C29183}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E335FB1-3BDC-4614-9EB9-83E8A5C29183}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E335FB1-3BDC-4614-9EB9-83E8A5C29183}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{63C88742-7C00-4CFF-88B8-37376F3DCE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63C88742-7C00-4CFF-88B8-37376F3DCE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63C88742-7C00-4CFF-88B8-37376F3DCE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63C88742-7C00-4CFF-88B8-37376F3DCE19}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{97F03D2F-4217-453D-9D11-BF1D7743ADC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97F03D2F-4217-453D-9D11-BF1D7743ADC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97F03D2F-4217-453D-9D11-BF1D7743ADC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97F03D2F-4217-453D-9D11-BF1D7743ADC4}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> origin/tylerBranch
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
