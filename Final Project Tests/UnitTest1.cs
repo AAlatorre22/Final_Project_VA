@@ -20,7 +20,7 @@ namespace Final_Project_Tests
         [InlineData("Northern Mariana Islands", true)]
         [InlineData("u.s. virgin islands", true)]
         [InlineData("guam", true)]
-        [InlineData("hawaii", false)]
+        [InlineData("hawaii", true)]
         [InlineData("american samoa", true)]
         [InlineData("california", false)]
 
