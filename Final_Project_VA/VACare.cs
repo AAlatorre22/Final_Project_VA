@@ -1,6 +1,6 @@
 ﻿namespace Final_Project_VA
 {
-    public class Methods
+    public class VACare
     {
         //This method requires a specific question
         public  bool MedicalSeriveNOTAvailable(bool answerQ1)
