@@ -1,6 +1,6 @@
 ﻿namespace Final_Project_VA
 {
-    public class Methods
+    public class VACare
     {
         //This method requires a specific question
         public  bool MedicalSeriveNOTAvailable(bool answerQ1)
@@ -16,19 +16,25 @@
         //For this method we need to collect veteran state or create a null catch
         public static bool NoVAMedicalFacility(string vetState)
         {
-            string[] statesWithoutVAMed = { "Alaska", "Hawaii", "New Hampshire", "Guam", "American Samoa", "Northern Mariana Islands", "U.S. Virgin Islands" };
-            bool stateHasVAMed = Array.Exists(statesWithoutVAMed, state => state.Equals(vetState, StringComparison.OrdinalIgnoreCase));
+            string[] statesWithoutVAMed = { "Alaska", "Hawaii", "New Hampshire", "Guam",
+                "American Samoa", "Northern Mariana Islands", "U.S. Virgin Islands" };
 
-            if (stateHasVAMed == false)
+            bool stateHasNoVAMed = Array.Exists(statesWithoutVAMed, x => x.Equals(vetState, StringComparison.OrdinalIgnoreCase));
+
+            if (stateHasNoVAMed == true)
             {
                 Console.WriteLine("You may qualify for community care");
             }
+            else
+            {
+                Console.WriteLine("Based on your location, you do not qualify for VA Community Care under this rule."); ;
+            }
+            throw new NotImplementedException();
 
-            return stateHasVAMed;
         }
 
         //This method will need to pass a string for the date the veteran moved into their current address.
-        public static bool GrandfatherEligibility(double answerQ3)
+        public static bool GrandFatherEligibility(double answerQ3)
         {
             string movedInDate = "01/01/2016";
             var vetState = "Montana";
@@ -58,10 +64,11 @@
             if (aveDriveTimeMF > 30 || aveDriveTimeSC > 60 || aveWaitDayMF > 20 || aveWaitDaySC > 28)
             {
                 Console.WriteLine("You may qualify for Community Care");
-                return true; 
+                return true;
             }
             else
-            return false;
+                return false;
+           // throw new NotImplementedException();
         }
 
         //This method requires a specific question 
