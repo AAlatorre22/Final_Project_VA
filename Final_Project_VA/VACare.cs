@@ -2,10 +2,9 @@
 {
     public class Methods
     {
-        //Specific Question required
-        public static bool MedicalSeriveNOTAvailable(bool answerQ1)
+        //This method requires a specific question
+        public  bool MedicalSeriveNOTAvailable(bool answerQ1)
         {
-           
             if (answerQ1 == true)
             {
                 Console.WriteLine("You may qualify for community care");
@@ -14,7 +13,7 @@
             return answerQ1;
         }
 
-        //
+        //For this method we need to collect veteran state or create a null catch
         public static bool NoVAMedicalFacility(string vetState)
         {
             string[] statesWithoutVAMed = { "Alaska", "Hawaii", "New Hampshire", "Guam", "American Samoa", "Northern Mariana Islands", "U.S. Virgin Islands" };
@@ -28,8 +27,8 @@
             return stateHasVAMed;
         }
 
-        //It may need to pass in a string for the date the veteran moved into their current address
-        public static bool DistanceEligibility(double answerQ3)
+        //This method will need to pass a string for the date the veteran moved into their current address.
+        public static bool GrandfatherEligibility(double answerQ3)
         {
             string movedInDate = "01/01/2016";
             var vetState = "Montana";
@@ -46,44 +45,44 @@
                 // Check if veteran is residing top5 lowest population density states or has received care between certain dates and requires care before June 2020
                 if (livesInLowDensity || /*(DateTime.Parse*/(timeAtAddress >= DateTime.Parse("06/06/2017") && /*DateTime.Parse*/(timeAtAddress) <= DateTime.Parse("06/06/2018")))
                 {
-                    Console.WriteLine("You may qualify for community care");
+                    Console.WriteLine("You may qualify for Community Care");
                     return true;
                 }
             }
             return false;
         }
 
-        public static bool IsEligibleForCommunityCare(int aveDriveTime, int aveWaitTime)
+        //I'm not sure how tocalculate the average drive times with the API. We might have to split up drivetime and waiting days based on the API.
+        public static bool TimeEligibility(int aveDriveTimeMF, int aveDriveTimeSC, int aveWaitDayMF, int aveWaitDaySC)
         {
-            // Check if eligible based on average drive time to VA medical facility
-            bool isEligibleBasedOnDriveTime = aveDriveTime > 30 || aveDriveTime > 60;
-
-            // Check if eligible based on appointment wait time at VA medical facility
-            bool isEligibleBasedOnAppointmentWaitTime = aveWaitTime > 20 || aveWaitTime > 28;
-
-            // Determine overall eligibility for community care
-            if (isEligibleBasedOnDriveTime || isEligibleBasedOnAppointmentWaitTime)
+            if (aveDriveTimeMF > 30 || aveDriveTimeSC > 60 || aveWaitDayMF > 20 || aveWaitDaySC > 28)
             {
-                return true;
+                Console.WriteLine("You may qualify for Community Care");
+                return true; 
             }
-
+            else
             return false;
         }
 
-
-        public static bool BestMedicalInterest(string answer5)
+        //This method requires a specific question 
+        public static bool BestMedicalInterest(bool answerQ5)
         {
-            throw new NotImplementedException();
+            if (answerQ5 == true)
+            {
+                Console.WriteLine("You may qualify for community care");
+            }
+
+            return answerQ5;
         }
 
-        public static void QualityStandards()
+        //Notes This method requires a specific question
+        public static bool QualityStandards(bool answerQ6)
         {
-            throw new NotImplementedException();
+            if (answerQ6 == true)
+            {
+                Console.WriteLine("You may qualify for community care");
+            }
+            return answerQ6;
         }
     }
-
-
-
-
-
 }
