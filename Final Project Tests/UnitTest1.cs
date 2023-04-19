@@ -37,6 +37,10 @@ namespace Final_Project_Tests
         [Theory]
         [InlineData(29, 30, 19, 27, false)]
         [InlineData(35, 65, 25, 29, true)]
+        [InlineData(35, 55, 15, 20, true)]
+        [InlineData(25, 65, 10, 16, true)]
+        [InlineData(20, 65, 12, 20, true)]
+        [InlineData(15, 15, 15, 9, false)]
         public void TimeEligibilityTest(int aveDriveTimeMF, int aveDriveTimeSC, int aveWaitDayMF, int aveWaitDaySC, bool expected)
         {
             //arrange

@@ -23,12 +23,12 @@
 
             if (stateHasNoVAMed == true)
             {
-                Console.WriteLine("You may qualify for community care");
+                //Console.WriteLine("You may qualify for community care");
                 return true;               
             }
             else
             {
-                Console.WriteLine("Based on your location, you do not qualify for VA Community Care under this rule."); 
+                //Console.WriteLine("Based on your location, you do not qualify for VA Community Care under this rule."); 
                 return false;
             }
             throw new NotImplementedException();
