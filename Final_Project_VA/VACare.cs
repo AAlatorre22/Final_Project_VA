@@ -24,11 +24,11 @@
                 Console.WriteLine("You may qualify for community care");
             }
 
-            return stateHasVAMed;
+            return true;
         }
 
         //This method will need to pass a string for the date the veteran moved into their current address.
-        public static bool GrandfatherEligibility(double answerQ3)
+        public static bool GrandFatherEligibility(double answerQ3)
         {
             string movedInDate = "01/01/2016";
             var vetState = "Montana";
