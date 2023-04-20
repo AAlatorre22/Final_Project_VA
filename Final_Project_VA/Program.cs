@@ -8,14 +8,14 @@ namespace Final_Project_VA
     {
         public static void Main(string[] args)
         {
-            string key = File.ReadAllText("appsettings.json");
-            string APIkey = JObject.Parse(key).GetValue("DefaultKey").ToString();
+            //string key = File.ReadAllText("appsettings.json");
+            //string APIkey = JObject.Parse(key).GetValue("DefaultKey").ToString();
 
 
-
-            Console.WriteLine("Please enter your state");
-            var state = Console.ReadLine();
-            string apiCall = $"https://sandbox-api.va.gov/services/va_facilities/v0/facilities?state={state}&appid={APIkey}";
+            //Console.WriteLine("Please enter your state");
+            // var state = Console.ReadLine();
+            string apiCall = $"https://sandbox-api.va.gov/services/va_facilities/v0/facilities?state=ca";
+                //&appid={APIkey}";
             Console.WriteLine(FacilityAPI.State(apiCall));
 
 
